@@ -4,7 +4,8 @@
   "description": "This is an admin service to manage problems of code platform",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"npx nodemon src/index.js"
   },
   "author": "Amit patwa",
   "license": "ISC",
