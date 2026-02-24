@@ -3,7 +3,6 @@ const bodyParser=require('body-parser')
 
 const {PORT}=require('./config/server.config');
 const apiRouter = require('./routes/index');
-// const BaseError = require('./errors/baseError');
 const errorHandler = require('./utils/errorHandeler');
 
 const app=express();
