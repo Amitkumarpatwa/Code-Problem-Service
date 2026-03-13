@@ -1,5 +1,6 @@
 // const Problem=require('../models');
 
+const NotFound = require("../errors/notfound.error.js");
 const { Problem } = require("../models/index.js");
 
 class ProblemRepository{
@@ -28,6 +29,21 @@ class ProblemRepository{
             throw error;
         }
 }
+
+    async getProblem(id){
+        try {
+            const problem= await Problem.findById(id);
+            
+            return problem;
+        } catch (error) {
+            if (error.name === "CastError") {
+                throw new NotFound("Problem", id);
+            }
+            console.log(error);
+            
+            throw error;
+        }
+    }
 }
 
 module.exports=ProblemRepository;
