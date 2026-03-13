@@ -10,6 +10,7 @@ const apiRouter = require("./routes/index");
 const errorHandler = require("./utils/errorHandler");
 const connectToDB = require("./config/db.config.js");
 
+
 const app = express();
 
 app.use(bodyParser.json());
